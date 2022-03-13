@@ -10,21 +10,21 @@ class Es3Test {
   private val odd = "odd"
 
   @Test
-  def testParityVal =
+  def testParityVal() =
     assertEquals(even, parityVal(4))
     assertEquals(even, parityVal(28))
     assertEquals(odd, parityVal(1))
     assertEquals(odd, parityVal(79))
 
   @Test
-  def testParityDef =
+  def testParityDef() =
     assertEquals(even, parityDef(2))
     assertEquals(even, parityDef(240))
     assertEquals(odd, parityDef(17))
     assertEquals(odd, parityDef(21))
 
   @Test
-  def testNegVal =
+  def testNegVal() =
     val empty: String => Boolean = _ == ""
     val notEmpty = negVal(empty)
     assertTrue(notEmpty("foo"))
@@ -32,7 +32,7 @@ class Es3Test {
     assertTrue(notEmpty("foo") && !notEmpty(""))
 
   @Test
-  def testNegDef =
+  def testNegDef() =
     val empty: String => Boolean = _ == ""
     val notEmpty = negDef(empty)
     assertTrue(notEmpty("foo"))
@@ -40,7 +40,7 @@ class Es3Test {
     assertTrue(notEmpty("foo") && !notEmpty(""))
 
   @Test
-  def testNegGeneric =
+  def testNegGeneric() =
     val empty: String => Boolean = _ == ""
     val notEmpty = neg(empty)
     assertTrue(notEmpty("foo"))
